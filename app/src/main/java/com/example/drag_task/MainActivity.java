@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     List<Trip> tripList;
-
+    int itemNumber=33;
     RecyclerView recyclerView;
 
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         String status = "failed";
-        for (int i = 0; i < 33; i++) {
+        for (int i = 0; i < itemNumber; i++) {
             tripList.add(
                     new Trip(
                             "20 March 2019, 10:00 AM",
