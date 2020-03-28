@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentCard"
+    style="@style/parentCard"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp"
+            app:layout_constraintGuide_percent="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp"
+
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp"
+
+            app:layout_constraintGuide_percent="0.80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp"
+
+            app:layout_constraintGuide_percent="1.0" />
+
+        <TextView
+            android:id="@+id/bookingid"
+            style="@style/id_date"
+            android:layout_marginStart="20dp"
+
+            android:text="Booking ID: JF092319"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/id_date"
+            android:layout_marginStart="20dp"
+            android:text="20 Mar 2019, 10:00 AM"
+            app:layout_constraintBottom_toTopOf="@+id/bookingid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline" />
+
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/price"
+            android:layout_marginEnd="20dp"
+            android:text="₹ 2199.43"
+            app:layout_constraintBottom_toBottomOf="@+id/date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/date" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="14dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
+            app:srcCompat="@drawable/origin" />
+
+        <TextView
+            android:id="@+id/origin"
+            style="@style/places"
+            android:layout_marginBottom="5dp"
+
+            android:text="Silver Jubilee Tower"
+            app:layout_constraintBottom_toTopOf="@+id/destination"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="14sp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/dots" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="14dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:srcCompat="@drawable/destination" />
+
+
+        <TextView
+            android:id="@+id/destination"
+            style="@style/places"
+            android:layout_marginTop="5dp"
+
+            android:text=" St. Mary's Bascilica, Bengaluru"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/origin" />
+
+        <TextView
+            android:id="@+id/payment_status"
+            style="@style/paymentStatus"
+            android:background="@color/grapefruit"
+            android:text="Payment Successfull"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
